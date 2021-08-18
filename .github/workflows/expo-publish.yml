@@ -20,11 +20,3 @@ jobs:
         run: yarn install
       - name: Publish iOS and Android
         run: expo publish
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-          with:
-            repoToken: '${{ secrets.GITHUB_TOKEN }}'
-            firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VIGILANT_FORTNIGHT }}'
-            channelId: live
-            projectId: vigilant-fortnight
-      - name: Publish web
-        run: yarn deploy-hosting
