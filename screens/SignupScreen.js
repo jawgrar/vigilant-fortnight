@@ -47,7 +47,6 @@ export default function SignupScreen({ navigation }) {
           backgroundColor: '#fff',
           marginBottom: 20
         }}
-        leftIcon='email'
         placeholder='Enter email'
         autoCapitalize='none'
         keyboardType='email-address'
@@ -64,7 +63,6 @@ export default function SignupScreen({ navigation }) {
           backgroundColor: '#fff',
           marginBottom: 20
         }}
-        leftIcon='lock'
         placeholder='Enter password'
         autoCapitalize='none'
         autoCorrect={false}
