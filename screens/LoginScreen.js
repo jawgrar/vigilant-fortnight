@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { useState } from 'react';
-import { StyleSheet, Text, View, Button as RNButton } from 'react-native';
-
+import { StyleSheet, SafeAreaView, Button as RNButton } from 'react-native';
+import { Title } from 'react-native-paper';
 import { Button, InputField, ErrorMessage } from '../components';
 import Firebase from '../config/firebase';
+import GlobalStyles from '../GlobalStyles';
 
 const auth = Firebase.auth();
 
@@ -35,19 +36,21 @@ export default function LoginScreen({ navigation }) {
     }
   };
 
+  const navigateToSignUp = () => navigation.navigate('Signup');
+
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={GlobalStyles.droidSafeArea}>
       <StatusBar style='dark-content' />
-      <Text style={styles.title}>Login</Text>
+      <Title style={{color: '#000'}}>Login</Title>
       <InputField
-        inputStyle={{
-          fontSize: 14
-        }}
-        containerStyle={{
-          backgroundColor: '#fff',
-          marginBottom: 20
-        }}
-        leftIcon='email'
+        // inputStyle={{
+        //   fontSize: 14
+        // }}
+        // containerStyle={{
+        //   backgroundColor: '#fff',
+        //   marginBottom: 20
+        // }}
+        // leftIcon='email'
         placeholder='Enter email'
         autoCapitalize='none'
         keyboardType='email-address'
@@ -57,14 +60,14 @@ export default function LoginScreen({ navigation }) {
         onChangeText={text => setEmail(text)}
       />
       <InputField
-        inputStyle={{
-          fontSize: 14
-        }}
-        containerStyle={{
-          backgroundColor: '#fff',
-          marginBottom: 20
-        }}
-        leftIcon='lock'
+        // inputStyle={{
+        //   fontSize: 14
+        // }}
+        // containerStyle={{
+        //   backgroundColor: '#fff',
+        //   marginBottom: 20
+        // }}
+        // leftIcon='lock'
         placeholder='Enter password'
         autoCapitalize='none'
         autoCorrect={false}
@@ -78,35 +81,36 @@ export default function LoginScreen({ navigation }) {
       {loginError ? <ErrorMessage error={loginError} visible={true} /> : null}
       <Button
         onPress={onLogin}
-        backgroundColor='#f57c00'
+        // backgroundColor='#f57c00'
         title='Login'
-        tileColor='#fff'
-        titleSize={20}
-        containerStyle={{
-          marginBottom: 24
-        }}
+        // tileColor='#fff'
+        // titleSize={20}
+        // containerStyle={{
+        //   marginBottom: 24
+        // }}
       />
       <RNButton
-        onPress={() => navigation.navigate('Signup')}
+        onPress={navigateToSignUp}
         title='Go to Signup'
-        color='#fff'
+        // color='#fff'
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#e93b81',
-    paddingTop: 50,
-    paddingHorizontal: 12
+    // padding: 8
+    // flex: 1,
+    // backgroundColor: 'tomato',
+    // paddingTop: 50,
+    // paddingHorizontal: 12
   },
   title: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: '#fff',
-    alignSelf: 'center',
-    paddingBottom: 24
+    // fontSize: 24,
+    // fontWeight: '600',
+    // color: '#fff',
+    // alignSelf: 'center',
+    // paddingBottom: 24
   }
 });
