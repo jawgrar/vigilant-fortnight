@@ -14,7 +14,7 @@ jobs:
           node-version: 14.x
       - uses: expo/expo-github-action@v6
         with:
-          expo-version: 5.x
+          expo-version: 4.x
           token: ${{ secrets.EXPO_TOKEN }}
       - name: Install Packages
         run: yarn install
