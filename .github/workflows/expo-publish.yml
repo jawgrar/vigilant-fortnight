@@ -1,4 +1,4 @@
-name: Publish Expo iOS and Android on merge
+name: Publish Expo OTA on merge
 on:
   push:
     branches:
