@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 export default {
   expo: {
-    name: "vigilant-fortnight",
+    name: process.env.PROJECT_NAME,
     slug: "vigilant-fortnight",
     version: "1.0.0",
     orientation: "portrait",
@@ -19,9 +19,13 @@ export default {
       "**/*"
     ],
     ios: {
+      bundleIdentifier: process.env.IOS_BUNDLE_IDENTIFIER,
+      buildNumber: "1.0.0",
       supportsTablet: true
     },
     android: {
+      package: process.env.ANDROID_PACKAGE,
+      versionCode: 1,
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#FFFFFF"
@@ -31,12 +35,12 @@ export default {
       favicon: "./assets/favicon.png"
     },
     extra: {
-      apiKey: process.env.API_KEY,
-      authDomain: process.env.AUTH_DOMAIN,
-      projectId: process.env.PROJECT_ID,
-      storageBucket: process.env.STORAGE_BUCKET,
-      messagingSenderId: process.env.MESSAGING_SENDER_ID,
-      appId: process.env.APP_ID
+      apiKey: process.env.FIREBASE_API_KEY,
+      authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+      projectId: process.env.FIREBASE_PROJECT_ID,
+      storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+      appId: process.env.FIREBASE_APP_ID
     }
   }
 }
