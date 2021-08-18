@@ -22,3 +22,5 @@ jobs:
         run: expo build
       - name: Publish iOS and Android
         run: expo publish
+      - name: Publish web
+        run: yarn deploy-hosting
