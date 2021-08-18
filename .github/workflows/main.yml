@@ -18,8 +18,6 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
       - name: Install Packages
         run: yarn install
-      - name: Build App
-        run: expo build
       - name: Deploy to Firebase Hosting
         run: yarn deploy-hosting
       - name: Publish iOS and Android
