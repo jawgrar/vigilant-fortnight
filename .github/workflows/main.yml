@@ -21,4 +21,4 @@ jobs:
       # - name: Deploy to Firebase Hosting
       #   run: yarn deploy-hosting
       - name: Publish iOS and Android
-        run: expo publis
+        run: expo publish
