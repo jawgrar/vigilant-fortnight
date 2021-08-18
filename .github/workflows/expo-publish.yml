@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  build_and_deploy:
+  build_and_publish:
     name: Install and publish
     runs-on: ubuntu-latest
     steps:
@@ -18,9 +18,7 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
       - name: Install Packages
         run: yarn install
-      - name: Build iOS and Android
+      - name: Expo build
         run: expo build
-      - name: Publish iOS and Android
+      - name: Expo publish
         run: expo publish
-      - name: Publish web
-        run: yarn deploy-hosting
