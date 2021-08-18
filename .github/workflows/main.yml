@@ -1,4 +1,4 @@
-name: Expo GitHub Action - deploy & publish
+name: Expo publish
 on:
   push:
     branches:
@@ -18,7 +18,5 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
       - name: Install Packages
         run: yarn install
-      # - name: Deploy to Firebase Hosting
-      #   run: yarn deploy-hosting
       - name: Publish iOS and Android
         run: expo publish
