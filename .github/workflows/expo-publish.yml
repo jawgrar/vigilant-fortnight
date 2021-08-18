@@ -1,4 +1,4 @@
-name: Expo publish
+name: Publish Expo iOS and Android on merge
 on:
   push:
     branches:
