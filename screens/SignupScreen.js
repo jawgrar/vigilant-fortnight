@@ -6,6 +6,7 @@ import { Title } from 'react-native-paper';
 
 import { Button, InputField, ErrorMessage } from '../components';
 import Firebase from '../config/firebase';
+import GlobalStyles from '../GlobalStyles';
 
 const auth = Firebase.auth();
 
