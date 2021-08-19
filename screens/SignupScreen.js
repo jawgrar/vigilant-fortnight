@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { useState } from 'react';
-import { StyleSheet, Text, View, Button as RNButton } from 'react-native';
+import { StyleSheet, SafeAreaView, Button as RNButton } from 'react-native';
 import { Title } from 'react-native-paper';
 
 import { Button, InputField, ErrorMessage } from '../components';
@@ -37,7 +37,7 @@ export default function SignupScreen({ navigation }) {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={GlobalStyles.droidSafeArea}>
       <StatusBar style='dark-content' />
       <Title style={{color: '#000'}}>Create new account</Title>
       <InputField
@@ -90,7 +90,7 @@ export default function SignupScreen({ navigation }) {
         title='Go to Login'
         // color='#fff'
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
