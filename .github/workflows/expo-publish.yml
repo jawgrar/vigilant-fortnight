@@ -16,13 +16,9 @@ jobs:
         with:
           expo-version: 4.x
           token: ${{ secrets.EXPO_TOKEN }}
+      - name: Install Packages
+        run: yarn install
       - name: Expo build
-        run: yarn && expo build
-      - name: Expo publish iOS and Android
+        run: expo build
+      - name: Expo publish
         run: expo publish
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VIGILANT_FORTNIGHT }}'
-          channelId: live
-          projectId: vigilant-fortnight
