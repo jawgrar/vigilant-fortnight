@@ -40,13 +40,13 @@ export default function SignupScreen({ navigation }) {
       <StatusBar style='dark-content' />
       <Text style={styles.title}>Create new account</Text>
       <InputField
-        inputStyle={{
-          fontSize: 14
-        }}
-        containerStyle={{
-          backgroundColor: '#fff',
-          marginBottom: 20
-        }}
+        // inputStyle={{
+        //   fontSize: 14
+        // }}
+        // containerStyle={{
+        //   backgroundColor: '#fff',
+        //   marginBottom: 20
+        // }}
         placeholder='Enter email'
         autoCapitalize='none'
         keyboardType='email-address'
@@ -56,13 +56,13 @@ export default function SignupScreen({ navigation }) {
         onChangeText={text => setEmail(text)}
       />
       <InputField
-        inputStyle={{
-          fontSize: 14
-        }}
-        containerStyle={{
-          backgroundColor: '#fff',
-          marginBottom: 20
-        }}
+        // inputStyle={{
+        //   fontSize: 14
+        // }}
+        // containerStyle={{
+        //   backgroundColor: '#fff',
+        //   marginBottom: 20
+        // }}
         placeholder='Enter password'
         autoCapitalize='none'
         autoCorrect={false}
@@ -78,16 +78,16 @@ export default function SignupScreen({ navigation }) {
         onPress={onHandleSignup}
         backgroundColor='#f57c00'
         title='Signup'
-        tileColor='#fff'
-        titleSize={20}
-        containerStyle={{
-          marginBottom: 24
-        }}
+        // tileColor='#fff'
+        // titleSize={20}
+        // containerStyle={{
+        //   marginBottom: 24
+        // }}
       />
       <RNButton
         onPress={() => navigation.navigate('Login')}
         title='Go to Login'
-        color='#fff'
+        // color='#fff'
       />
     </View>
   );
@@ -95,16 +95,16 @@ export default function SignupScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     // backgroundColor: '#e93b81',
-    paddingTop: 50,
-    paddingHorizontal: 12
+    // paddingTop: 50,
+    // paddingHorizontal: 12
   },
   title: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: '#fff',
-    alignSelf: 'center',
-    paddingBottom: 24
+    // fontSize: 24,
+    // fontWeight: '600',
+    // color: '#fff',
+    // alignSelf: 'center',
+    // paddingBottom: 24
   }
 });
