@@ -9,7 +9,7 @@ import GlobalStyles from '../GlobalStyles';
 
 const auth = Firebase.auth();
 
-// TODO: test
+// TODO: add spacing
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
